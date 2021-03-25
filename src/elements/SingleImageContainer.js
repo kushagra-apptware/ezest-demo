@@ -9,11 +9,13 @@ export const SingleImageContainer = (props) => {
             <div className='imageInfoBox'>
                 {ImageInfo.title.trim() == '' ?
                     <p className='imageName'>
-                        <a target="_blank"  href={UserInfoUrl + ImageInfo.author_id}>{ImageInfo.author}</a>
+                        <a target="_blank" href={UserInfoUrl + ImageInfo.author_id}>
+                            {ImageInfo.author.substring(0, 50) + `${ImageInfo.author.length > 50 ? '...' : ''}`}
+                        </a>
                     </p>
                     :
                     <p className='imageName'>
-                        <a target="_blank"  href={ImageInfo.link}>{ImageInfo.title}</a> by <a target="_blank"  href={UserInfoUrl + ImageInfo.author_id}>{ImageInfo.author}</a>
+                        <a target="_blank" href={ImageInfo.link}>{ImageInfo.title.substring(0, 50) + `${ImageInfo.title.length > 50 ? '...' : ''}`}</a> by <a target="_blank" href={UserInfoUrl + ImageInfo.author_id}>{ImageInfo.author.substring(0, 50) + `${ImageInfo.author.length > 50 ? '...' : ''}`}</a>
                     </p>
                 }
 
