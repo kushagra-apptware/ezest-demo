@@ -18,7 +18,7 @@ export const SingleImageContainer = (props) => {
                 }
 
                 <p className='imageDescription' title={ImageInfo.description}>
-                    Description: {ImageInfo.description.substring(0, 150) + `${ImageInfo.description.length > 150 ? '...' : ''}`}
+                    Description: {ImageInfo.description.substring(0, 120) + `${ImageInfo.description.length > 120 ? '...' : ''}`}
                 </p>
                 <p className='imageTags' title={ImageInfo.tags}>
                     Tags: {ImageInfo.tags.trim().replaceAll(' ', ', ')}

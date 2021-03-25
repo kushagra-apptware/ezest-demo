@@ -52,9 +52,9 @@
     width: 25%;
     padding: 5px;
     height: 520px;
-    overflow: hidden;
+    overflow: auto;
     margin-bottom: 20px;
-
+    
     .imageBorder{
       border: 1px solid black;
       overflow: hidden;
@@ -78,7 +78,9 @@
         }
       }
     }
-
+    @media screen and (max-width: 1000px) {
+      width: 50%;
+    }
     @media screen and (max-width: 500px) {
         width: 100%;
     }
